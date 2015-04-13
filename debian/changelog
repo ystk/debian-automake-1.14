@@ -1,3 +1,12 @@
+automake-1.14 (1:1.14.1-4) unstable; urgency=medium
+
+  * debian/patches/03-ensure-ac_aux_dir-set.diff: Add patch to ensure
+    ac_aux_dir is set before beeing used. (Closes: #764127)
+  * debian/control: Bump Standards-Version to 3.9.6 (no changes).
+  * debian/control, debian/copyright: Run wrap-and-sort.
+
+ -- Eric Dorland <eric@debian.org>  Sun, 26 Oct 2014 21:15:42 -0400
+
 automake-1.14 (1:1.14.1-3) unstable; urgency=low
 
   * debian/upstream/signing-key.asc: Rename upstream-signing-key.gpg to

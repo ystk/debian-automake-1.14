@@ -2,16 +2,39 @@ Source: automake-1.14
 Section: devel
 Priority: optional
 Maintainer: Eric Dorland <eric@debian.org>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.6
 Build-Depends: debhelper (>= 9)
-Build-Depends-Indep: autoconf (>= 2.65), autotools-dev (>= 20020320.1),
- install-info,
-# Used in tests
- autopoint, bison, cscope, dejagnu, emacs, expect, flex, gcj-jdk,
- gobjc, gobjc++, gfortran, help2man, libglib2.0-dev, libtool, lzip,
- ncompress, openjdk-7-jdk, python, python-docutils, python-virtualenv,
- pkg-config, sharutils, texlive, texinfo (>= 4.9), unzip, valac,
- xutils-dev, zip
+Build-Depends-Indep: autoconf (>= 2.65),
+                     autopoint,
+                     autotools-dev (>= 20020320.1),
+                     bison,
+                     cscope,
+                     dejagnu,
+                     emacs,
+                     expect,
+                     flex,
+                     gcj-jdk,
+                     gfortran,
+                     gobjc,
+                     gobjc++,
+                     help2man,
+                     install-info,
+                     libglib2.0-dev,
+                     libtool,
+                     lzip,
+                     ncompress,
+                     openjdk-7-jdk,
+                     pkg-config,
+                     python,
+                     python-docutils,
+                     python-virtualenv,
+                     sharutils,
+                     texinfo (>= 4.9),
+                     texlive,
+                     unzip,
+                     valac,
+                     xutils-dev,
+                     zip
 Homepage: http://www.gnu.org/software/automake/
 Vcs-Git: git://anonscm.debian.org/users/eric/automake-1.14.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/eric/automake-1.14.git
@@ -19,10 +42,12 @@ Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/eric/automake-1.14.git
 Package: automake
 Architecture: all
 Multi-Arch: foreign
-Provides: automaken, automake-1.14
+Provides: automake-1.14, automaken
 Depends: autoconf (>= 2.65), autotools-dev (>= 20020320.1), ${misc:Depends}
-Conflicts: automake1.6 (<< 1.6.1-4), automake (<< 1:1.4-p5-1),
- automake1.5 (<< 1.5-2), automake1.10-doc
+Conflicts: automake (<< 1:1.4-p5-1),
+           automake1.10-doc,
+           automake1.5 (<< 1.5-2),
+           automake1.6 (<< 1.6.1-4)
 Description: Tool for generating GNU Standards-compliant Makefiles
  Automake is a tool for automatically generating `Makefile.in's from
  files called `Makefile.am'.
@@ -30,7 +55,7 @@ Description: Tool for generating GNU Standards-compliant Makefiles
  The goal of Automake is to remove the burden of Makefile maintenance
  from the back of the individual GNU maintainer (and put it on the back
  of the Automake maintainer).
- . 
+ .
  The `Makefile.am' is basically a series of `make' macro definitions
  (with rules being thrown in occasionally).  The generated
  `Makefile.in's are compliant with the GNU Makefile standards.
